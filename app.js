@@ -138,5 +138,5 @@ if(port==null||port==""){
 }
 
 app.listen(port, function () {
-  console.log("Server started Successfully");
+  console.log("Server started : visit http://localhost:3000 ");
 });

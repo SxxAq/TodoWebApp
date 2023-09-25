@@ -37,7 +37,7 @@ TodoWebApp is a simple to-do list web application built using Node.js, Express.j
 5. Start the application:
 
    ```bash
-   npm start
+   node app.js
    ```
 
    The application will be accessible at `http://localhost:3000` by default. You can change the port in `app.js` if needed.
@@ -64,9 +64,9 @@ We welcome contributions from the community! If you'd like to contribute to this
 
 1. Fork the repository on GitHub.
 2. Clone your forked repository to your local machine.
-3. Create a new branch for your feature or bug fix: `git checkout -b feature/your-feature-name` or `git checkout -b bugfix/your-bug-name`.
+3. Create a new branch for your feature or bug fix: `git checkout -b <feature-name/username/bug>`.
 4. Make your changes and commit them with a descriptive commit message.
-5. Push your changes to your forked repository: `git push origin feature/your-feature-name`.
+5. Push your changes to your forked repository: `git push origin <feature-name/username/bug>`.
 6. Submit a pull request to the main repository's `main` branch, explaining the changes you've made.
 
 ## License
