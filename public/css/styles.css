@@ -1,8 +1,10 @@
 html {
-  background-color: #E4E9FD;
-  background-image: -webkit-linear-gradient(65deg, #A683E3 50%, #E4E9FD 50%);
+  background-color: #e4e9fd;
+  /* background-image: -webkit-linear-gradient(65deg, #A683E3 50%, #E4E9FD 50%); */
+  background: linear-gradient(to top, #dbdcd7 0%, #dddcd7 24%, #e2c9cc 30%, #e7627d 46%, #b8235a 59%, #801357 71%, #3d1635 84%, #1c1a27 100%);
   min-height: 1000px;
-  font-family: 'helvetica neue';
+  font-family: 'Montserrat', sans-serif;
+
 }
 
 h1 {
@@ -19,28 +21,35 @@ h1 {
 }
 
 #heading {
-  background-color: #A683E3;
+  /* background-color: transparent; */
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   text-align: center;
+  border-radius: 25px;
+  cursor:default;
 }
 
 .item {
   min-height: 70px;
   display: flex;
   align-items: center;
-  border-bottom: 1px solid #F1F1F1;
+  border-bottom: 1px solid #f1f1f1;
+
 }
 
 .item:last-child {
   border-bottom: 0;
 }
 
-input:checked+p {
+input:checked + p {
   text-decoration: line-through;
-  text-decoration-color: #A683E3;
+  text-decoration-color: #a683e3;
 }
 
 input[type="checkbox"] {
-  margin: 20px;
+  margin: 15px;
+  cursor:pointer;
 }
 
 p {
@@ -58,39 +67,56 @@ form.item {
 
 button {
   min-height: 50px;
-  width: 50px;
-  border-radius: 50%;
+  width: 51px;
+  border-radius: 32%;
   border-color: transparent;
-  background-color: #A683E3;
+  background-color: #2d2d2d;
   color: #fff;
   font-size: 30px;
-  padding-bottom: 6px;
+  padding-bottom: 1px;
   border-width: 0;
+  cursor: pointer;
 }
 
 input[type="text"] {
   text-align: center;
   height: 60px;
   top: 10px;
-  border: none;
+  border-color: transparent;
   background: transparent;
   font-size: 20px;
   font-weight: 200;
   width: 313px;
+  cursor: pointer;
 }
 
 input[type="text"]:focus {
   outline: none;
-  box-shadow: inset 0 -3px 0 0 #A683E3;
+  box-shadow: inset 0 0px 0 0 #797979;
+  cursor: pointer;
 }
 
 ::placeholder {
-  color: grey;
+  color: rgb(247, 244, 244);
   opacity: 1;
 }
 
 footer {
-  color: white;
-  color: rgba(0, 0, 0, 0.5);
+  color: rgb(0, 0, 0);
   text-align: center;
 }
+
+footer .note{
+  color: white;
+}
+
+.glass{
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border:1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  
+}
+
