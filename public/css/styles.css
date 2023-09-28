@@ -3,7 +3,13 @@ html {
   background: linear-gradient(to top, #c2e59c,#64b3f4);
   min-height: 1000px;
   font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
 
+}
+body{
+  margin: 0;
+  padding: 0;
 }
 
 h1 {
@@ -11,6 +17,47 @@ h1 {
   padding: 10px;
   transition: 0.4s ease;
 }
+
+
+/* Style the navigation bar */
+header {
+  background-color: #32a3ee;
+  color: #fff;
+  padding: 1rem;
+  display: flex; /* Add flex display */
+  justify-content: space-between; /* Space between h1 and nav */
+  align-items: center; /* Vertically center items */
+  margin: 0 10rem;
+  border-radius: 1rem;
+}
+.navbar-brand {
+  text-decoration: none;
+  color: #f0f0f0
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: right; /* Align the links to the right */
+}
+
+nav li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #00bcd4;
+}
+
 
 .box {
   max-width: 400px;
