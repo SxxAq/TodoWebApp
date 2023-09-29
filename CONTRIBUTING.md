@@ -1,5 +1,6 @@
+![hacktoberfest-2023](https://github.com/SxxAq/TodoWebApp/assets/98530202/72b3ed9f-973c-4e91-b2fa-d4b40d9417fd)
+
 # Contributing to TodoWebApp - Your First Open Source Contribution Guide
-https://github.blog/wp-content/uploads/2022/10/hacktoberfestbanner.jpeg?resize=1200%2C630
 Welcome to the TodoWebApp open-source project! We are excited that you want to make your first contribution to open source. This guide will walk you through the steps to get started and make your first pull request (PR).
 
 ## Your First Contribution
