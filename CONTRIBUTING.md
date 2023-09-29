@@ -1,5 +1,5 @@
 # Contributing to TodoWebApp - Your First Open Source Contribution Guide
-https://github.blog/wp-content/uploads/2022/10/hacktoberfestbanner.jpeg?resize=1200%2C630
+[https://github.blog/wp-content/uploads/2022/10/hacktoberfestbanner.jpeg?resize=1200%2C630](https://miro.medium.com/v2/resize:fit:4800/format:webp/0*McOGR_vW3LivYNor.png)
 Welcome to the TodoWebApp open-source project! We are excited that you want to make your first contribution to open source. This guide will walk you through the steps to get started and make your first pull request (PR).
 
 ## Your First Contribution
