@@ -1,9 +1,10 @@
-html {
-  background-color: #e4e9fd;
-  background: linear-gradient(to top, #c2e59c,#64b3f4);
-  min-height: 1000px;
-  font-family: 'Montserrat', sans-serif;
-
+body {
+  margin: 0;
+  padding: 0;
+  background: radial-gradient(circle at 10% 20%, rgba(234, 249, 249, 0.67) 0.1%, rgba(239, 249, 251, 0.63) 90.1%);
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 h1 {
@@ -12,15 +13,81 @@ h1 {
   transition: 0.4s ease;
 }
 
+/*-------------------HEAD-------------------------------- */
+header {
+  background: radial-gradient(919px at 1.7% 6.1%, rgb(41, 58, 76) 0%, rgb(40, 171, 226) 100.2%);
+  color: #fff;
+  padding: 1rem;
+  display: flex; /* Add flex display */
+  justify-content: space-between; /* Space between h1 and nav */
+  align-items: center; /* Vertically center items */
+  margin: 0 10rem;
+  border-radius: 1rem;
+}
+.navbar-brand {
+  text-decoration: none;
+  color: #f0f0f0;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: right; /* Align the links to the right */
+}
+
+nav li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #00bcd4;
+}
+
+/* ===========HOME================== */
+.container {
+  text-align: center;
+
+  color: #fff;
+  padding: 50px 0;
+}
+
+.container h1 {
+  font-size: 3rem;
+}
+
+.container p {
+  font-size: 1.5rem;
+}
+
+.btn-custom {
+  margin-right: 20px;
+}
+.container a {
+  margin: 1rem 1rem;
+}
+
+/*======================LIST=========================*/
 .box {
   max-width: 400px;
   margin: 50px auto;
   background: white;
-  border-radius: 5px;
+
   box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.3);
-  }
-.box h1:hover{
-  background: linear-gradient(to top, #c2e59c,#64b3f4);
+
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+.box h1:hover {
+  background: linear-gradient(to top, #c2e59c, #64b3f4);
   color: white;
   border: 1px;
   border-radius: 25px;
@@ -31,7 +98,7 @@ h1 {
   color: black;
   text-align: center;
   border-radius: 25px;
-  cursor:default;
+  cursor: default;
   border: 1px;
 }
 
@@ -40,7 +107,6 @@ h1 {
   display: flex;
   align-items: center;
   border-bottom: 1px solid #f1f1f1;
-
 }
 
 .item:last-child {
@@ -54,15 +120,16 @@ input:checked + p {
 
 input[type="checkbox"] {
   margin: 15px;
-  cursor:pointer;
+  cursor: pointer;
+  
 }
 
 p {
   margin: 0;
   padding: 20px;
-  font-size: 20px;
-  font-weight: 200;
-  color: #00204a;
+  font-size: 1.3rem;
+  font-weight: 300;
+  color: #00204b;
 }
 
 form.item {
@@ -106,20 +173,44 @@ input[type="text"]:focus {
   opacity: 1;
 }
 
+/*==============FOOTER=================*/
+
 footer {
-  color: rgb(0, 0, 0);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+
+  color: #fff; /* Adjust the text color as needed */
   text-align: center;
+  padding: 10px 0; /* Add padding for spacing */
 }
 
-footer .note{
+footer .note {
   color: white;
 }
 
-.glass{
-  background: white;
-  border-radius: 20px;
-  border:1px solid rgba(255, 255, 255, 0.18);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-  
+/* =============About Page==================== */
+
+.about-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
+h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #fafafa;
+}
+
+.about-container p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #746a6a;
+  max-width: 600px;
+}
+
+/* Additional styling for the footer or any other elements as needed */
