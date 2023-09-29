@@ -2,3 +2,9 @@
 npm-debug.log
 .DS_Store
 /*.env
+
+.env
+.env.development.local
+.env.test.local
+.env.production.local
+.env.local
