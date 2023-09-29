@@ -1,3 +1,5 @@
+![hacktoberfest-2023](https://github.com/SxxAq/TodoWebApp/assets/98530202/291f70a5-e84a-404a-812c-cffd47bee425)
+
 # TodoWebApp
 
 ## Description
