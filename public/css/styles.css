@@ -1,10 +1,12 @@
 body {
   margin: 0;
   padding: 0;
-  background: radial-gradient(circle at 10% 20%, rgba(234, 249, 249, 0.67) 0.1%, rgba(239, 249, 251, 0.63) 90.1%);
+  background: radial-gradient(
+    circle at 10% 20%,
+    rgba(234, 249, 249, 0.67) 0.1%,
+    rgba(239, 249, 251, 0.63) 90.1%
+  );
   font-family: "Montserrat", sans-serif;
-  margin: 0;
-  padding: 0;
 }
 
 h1 {
@@ -15,13 +17,17 @@ h1 {
 
 /*-------------------HEAD-------------------------------- */
 header {
-  background: radial-gradient(919px at 1.7% 6.1%, rgb(41, 58, 76) 0%, rgb(40, 171, 226) 100.2%);
+  background: radial-gradient(
+    919px at 1.7% 6.1%,
+    rgb(41, 58, 76) 0%,
+    rgb(40, 171, 226) 100.2%
+  );
   color: #fff;
-  padding: 1rem;
+  padding: 0.5rem;
   display: flex; /* Add flex display */
   justify-content: space-between; /* Space between h1 and nav */
   align-items: center; /* Vertically center items */
-  margin: 0 10rem;
+  margin: 1rem 10rem;
   border-radius: 1rem;
 }
 .navbar-brand {
@@ -33,12 +39,12 @@ nav ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  text-align: right; /* Align the links to the right */
+  /* text-align: right; Align the links to the right */
 }
 
 nav li {
   display: inline;
-  margin-right: 20px;
+  margin: 30px;
 }
 
 nav a {
@@ -75,10 +81,15 @@ nav a:hover {
   margin: 1rem 1rem;
 }
 
+.display-3 {
+  color: black;
+  font-weight: bold;
+}
+
 /*======================LIST=========================*/
 .box {
   max-width: 400px;
-  margin: 50px auto;
+  margin: 30px auto;
   background: white;
 
   box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.3);
@@ -87,10 +98,11 @@ nav a:hover {
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
 .box h1:hover {
-  background: linear-gradient(to top, #c2e59c, #64b3f4);
+  background: linear-gradient(to bottom, #c2e59c, #64b3f4);
   color: white;
   border: 1px;
   border-radius: 25px;
+  overflow: hidden;
 }
 
 #heading {
@@ -114,6 +126,7 @@ nav a:hover {
 }
 
 input:checked + p {
+  text-align: center;
   text-decoration: line-through;
   text-decoration-color: #a683e3;
 }
@@ -121,10 +134,9 @@ input:checked + p {
 input[type="checkbox"] {
   margin: 15px;
   cursor: pointer;
-  
 }
 
-p {
+.glass p {
   margin: 0;
   padding: 20px;
   font-size: 1.3rem;
@@ -132,7 +144,7 @@ p {
   color: #00204b;
 }
 
-form.item {
+form .item {
   text-align: center;
   margin-left: 20px;
 }
@@ -173,6 +185,14 @@ input[type="text"]:focus {
   opacity: 1;
 }
 
+.btn-class {
+  margin-bottom: 0.5rem;
+}
+
+.box-container {
+  margin-bottom: 5rem;
+}
+
 /*==============FOOTER=================*/
 
 footer {
@@ -180,14 +200,23 @@ footer {
   bottom: 0;
   left: 0;
   width: 100%;
-
-  color: #fff; /* Adjust the text color as needed */
+  background: rgb(234, 249, 249);
+  color: black; /* Adjust the text color as needed */
   text-align: center;
   padding: 10px 0; /* Add padding for spacing */
+  margin-top: 10px;
 }
 
 footer .note {
-  color: white;
+  padding: 0;
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 300;
+}
+
+footer strong {
+  display: block;
+  bottom: 0;
 }
 
 /* =============About Page==================== */
@@ -197,6 +226,7 @@ footer .note {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 6rem;
   text-align: center;
 }
 
@@ -211,6 +241,7 @@ h2 {
   line-height: 1.5;
   color: #746a6a;
   max-width: 600px;
+  margin-bottom: 1rem;
 }
 
 /* Additional styling for the footer or any other elements as needed */
