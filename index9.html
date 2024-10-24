@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="src/images/logos/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="src/images/logos/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="src/images/logos/favicon-16x16.png">
+    <link rel="manifest" href="src/images/logos/site.webmanifest">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="src/style.css">
+    <link rel="stylesheet" href="TodoList.css">
+    <link rel="stylesheet" href="elevated_button.css">
+    <link rel="stylesheet" href="Flex_box.css">
+    <link rel="stylesheet" href="Todo.css"> <!-- Include the additional styles -->
+
+    <title>Todo App | RS2-Codes</title>
+    <style>
+        body {
+            background: url('https://naujienos.vu.lt/wp-content/uploads/2023/11/VU-MIF-robotai-2-1536x1024.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+        h1 {
+            background: linear-gradient(to right, green, rgb(212, 88, 26), gold, rgb(67, 67, 174), red, yellow, rgb(182, 8, 188));
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+        .container {
+            margin: 20px auto;
+            max-width: 800px;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-cont justify-content-center">
+        <div class="d-flex justify-content-center max-width">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#"><img class="w-100" src="src/images/logos/rs2trans.png" alt="RS2-Codes"></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Github</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <h1 id="main-heading">TO-DO APP</h1>
+
+    <div class="container">
+        <header class="head-container text-center mb-2">
+            <div style="color: black;">
+                <p id="date">24th Sep</p>
+                <p id="day">Wednesday</p>
+            </div>
+        </header>
+
+        <div class="grid-container">
+            <input id="todo-input" type="text" placeholder="Enter Todo here" autocomplete="off">
+            <input id="todo-date" type="date">
+            <button class='btn-todo' onclick="addTodo();">Add</button>
+        </div>
+
+        <ul id="todo-list" class="todo-container"></ul>
+
+        <div class="completed-todo-list">
+            <h3 style="color: black;">Completed Tasks</h3>
+            <div class="completed-todo-list-title" id="completed-todo-list-title">
+                <button class="btn btn-block text-left completed_title pl-0 text-white" onclick="toggleCompleted()">
+                    Completed 
+                    <div id="task_counter">(0)</div>
+                </button>
+            </div>
+            <div class="completed-todo-list-items" id="completed-todo-list-items"></div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script>
+        let completedCount = 0;
+
+        function addTodo() {
+            const input = document.getElementById('todo-input');
+            const date = document.getElementById('todo-date');
+            const todoList = document.getElementById('todo-list');
+
+            if (input.value) {
+                const li = document.createElement('li');
+                li.style.display = 'flex';
+                li.style.justifyContent = 'space-between';
+                li.style.alignItems = 'center';
+
+                li.textContent = `${input.value} - ${date.value}`;
+                li.style.cursor = "pointer"; 
+                const deleteBtn = document.createElement('button');
+                deleteBtn.className = 'delete-btn';
+                deleteBtn.innerHTML = '<img src="https://img.icons8.com/ios-filled/50/000000/trash.png" alt="delete icon" />';
+                deleteBtn.onclick = function(event) {
+                    event.stopPropagation();  
+                    addToCompleted(li.textContent);
+                    li.remove();
+                };
+
+                li.appendChild(deleteBtn);
+
+                li.onclick = function() {
+                    li.classList.toggle("completed");
+                    completedCount += li.classList.contains("completed") ? 1 : -1;
+                    updateTaskCounter();
+                };
+
+                todoList.appendChild(li);
+                input.value = '';
+                date.value = '';
+            }
+        }
+
+        function addToCompleted(task) {
+            const completedList = document.getElementById('completed-todo-list-items');
+            const completedItem = document.createElement('div');
+            completedItem.textContent = task;
+            completedList.appendChild(completedItem);
+            completedCount++;
+            updateTaskCounter();
+        }
+
+        function updateTaskCounter() {
+            document.getElementById('task_counter').textContent = `(${completedCount})`;
+        }
+
+        function toggleCompleted() {
+            const completedList = document.getElementById('completed-todo-list-items');
+            completedList.style.display = completedList.style.display === 'none' ? 'block' : 'none';
+        }
+    </script>
+</body>
+
+</html>
